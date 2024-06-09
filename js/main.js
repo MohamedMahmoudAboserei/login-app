@@ -61,7 +61,7 @@ function signUpFunction() {
             '<span class="text-success m-3">Success</span>';
     }
 }
-let signUpEvent = document.getElementById("signup");
+let signUpEvent = document.getElementById("signUp");
 signUpEvent?.addEventListener("click", signUpFunction);
 // ============= for login================
 //for check inputs is empty or not
