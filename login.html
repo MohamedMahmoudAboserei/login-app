@@ -1,25 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/signup.png" rel="icon" type="image/png">
     <title>Login</title>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <div class="container my-5 text-center">
-        <div class="box py-5 m-auto w-75">
-            <h1>Smart Login System</h1>
-            <input id="loginEmail" class="form-control my-3 w-75" placeholder="Enter your email" type="email">
-            <input id="loginPassword" class="form-control my-3 w-75" placeholder="Enter your password" type="password">
-            <p id="incorrect"></p>
-            <button onclick="loginFunction()" id="login" class="btn btn-outline-info w-75 my-3">Login</button>
-            <p class="text-white">Don’t have an account? <a class='text-white' href='signup.html'>Sign Up</a></p>
+    <div class="container">
+        <div class="forms">
+            <!-- Login Form -->
+            <div class="form login">
+                <span class="title">Login</span>
+                <div class="input-field">
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                    <i class="fa-regular fa-envelope icon"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="loginPassword" class="password" placeholder="Enter your password" required>
+                    <i class="fa-solid fa-lock icon"></i>
+                    <i class="fa-solid fa-eye-slash showHidePw"></i>
+                </div>
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <input type="checkbox" id="logCheck">
+                        <label for="logCheck" class="text">Remember me</label>
+                    </div>
+                    <a href="#" class="text">Forgot password?</a>
+                </div>
+                <div class="input-field button">
+                    <input onclick="loginFunction()" id="login" type="button" value="Login">
+                </div>
+                <p id="incorrect"></p>
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="#" class="text signup-link">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+            <!-- Registration Form -->
+            <div class="form signup">
+                <span class="title">Registration</span>
+                <div class="input-field">
+                    <input id="signupName" type="text" placeholder="Enter your name" required>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="input-field Email">
+                    <input id="signupEmail" type="email" placeholder="Enter your email" required>
+                    <i class="fa-regular fa-envelope icon"></i>
+                </div>
+                <div class="input-field Pass">
+                    <input id="signupPassword" type="password" class="password" placeholder="Create a password" required>
+                    <i class="fa-solid fa-lock icon"></i>
+                    <i class="fa-solid fa-eye-slash showHidePw"></i>
+                </div>
+                <div class="input-field ConfirmPass">
+                    <input type="password" id="ConfirmPass" class="password" placeholder="Confirm a password" required>
+                    <i class="fa-solid fa-lock icon"></i>
+                    <i class="fa-solid fa-eye-slash showHidePw"></i>
+                </div>
+                <div class="input-field button">
+                    <input onclick="signUpFunction()" id="signUp" type="button" value="Signup">
+                </div>
+                <p id="exist"></p>
+                <div class="login-signup">
+                    <span class="text">Already a member?
+                        <a href="#" class="text login-link">Login Now</a>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
+
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/Validation.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -15,7 +15,7 @@ let username = localStorage.getItem("sessionUsername");
 if (username) {
     let usernameElement = document.getElementById("username");
     if (usernameElement) {
-        usernameElement.innerHTML = "Welcome " + username;
+        usernameElement.innerHTML = `Welcome <span class="name">${username}</span>`;
     }
 }
 
@@ -61,9 +61,8 @@ function signUpFunction() {
             '<span class="text-success m-3">Success</span>';
     }
 }
-/*
 let signUpEvent = document.getElementById("signup");
-signUpEvent.addEventListener("click", signUpFunction);*/
+signUpEvent?.addEventListener("click", signUpFunction);
 // ============= for login================
 //for check inputs is empty or not
 function isLoginEmpty() {
@@ -100,10 +99,10 @@ function loginFunction() {
         document.getElementById("incorrect").innerHTML =
             '<span class="p-2 text-danger">Incorrect email or password</span>';
     }
-}/*
+}
 let loginEvent = document.getElementById("login");
-loginEvent.addEventListener('click', loginFunction);
-*/
+loginEvent?.addEventListener('click', loginFunction);
+
 // for logout
 function logout() {
     localStorage.removeItem("sessionUsername");
