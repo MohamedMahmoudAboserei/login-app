@@ -90,7 +90,7 @@ function loginFunction() {
             localStorage.setItem("sessionUsername", signUpArray[i].name);
             userFound = true;
             if (baseURL === "/") {
-                location.replace("https://" + location.hostname + "/index.html");
+                location.replace("https://mohamedmahmoudaboserei.github.io/login-app/index.html");
             } else {
                 location.replace(baseURL + "/index.html");
             }
