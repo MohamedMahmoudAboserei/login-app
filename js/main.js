@@ -92,7 +92,7 @@ function loginFunction() {
             if (baseURL === "/") {
                 location.replace("https://mohamedmahmoudaboserei.github.io/login-app/index.html");
             } else {
-                location.replace(baseURL + "/index.html");
+                location.replace("https://mohamedmahmoudaboserei.github.io/login-app/index.html");
             }
             break;
         }
