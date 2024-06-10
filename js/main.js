@@ -42,7 +42,7 @@ function isEmailExist() {
 function signUpFunction() {
     if (isSignUpEmpty()) {
         document.getElementById("exist").innerHTML =
-            '<span class="text-danger m-3">All inputs are required</span>';
+            '<p class="text-danger text-center p-2">All inputs are required</p>';
         return false;
     }
     // to store all value as object
@@ -53,17 +53,18 @@ function signUpFunction() {
     };
     if (isEmailExist()) {
         document.getElementById("exist").innerHTML =
-            '<span class="text-danger m-3">Email already exists</span>';
+            '<p class="text-danger text-center p-2">Email already exists</p>';
     } else {
         signUpArray.push(signUp);
         localStorage.setItem("users", JSON.stringify(signUpArray));
         document.getElementById("exist").innerHTML =
-            '<span class="text-success m-3">Success</span>';
+            '<p class="text-success text-center p-2">Success</p>';
     }
 }
 /*
-let signUpEvent = document.getElementById("signup");
-signUpEvent.addEventListener("click", signUpFunction);*/
+let signUpEvent = document.getElementById("signUp");
+signUpEvent?.addEventListener("click", signUpFunction);
+*/
 // ============= for login================
 //for check inputs is empty or not
 function isLoginEmpty() {
@@ -75,7 +76,7 @@ function isLoginEmpty() {
 function loginFunction() {
     if (isLoginEmpty()) {
         document.getElementById("incorrect").innerHTML =
-            '<span class="text-danger m-3">All inputs are required</span>';
+            '<p class="text-danger text-center m-3">All inputs are required</p>';
         return false;
     }
     let email = loginName.value;
@@ -98,11 +99,12 @@ function loginFunction() {
     }
     if (!userFound) {
         document.getElementById("incorrect").innerHTML =
-            '<span class="p-2 text-danger">Incorrect email or password</span>';
+            '<p class="p-2 text-danger text-center">Incorrect email or password</p>';
     }
-}/*
+}
+/*
 let loginEvent = document.getElementById("login");
-loginEvent.addEventListener('click', loginFunction);
+loginEvent?.addEventListener('click', loginFunction);
 */
 // for logout
 function logout() {
