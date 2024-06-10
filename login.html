@@ -16,13 +16,15 @@
         <div class="forms">
             <!-- Login Form -->
             <div class="form login">
-                <span class="title">Login</span>
+                <h2>Login</h2>
                 <div class="input-field">
-                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                    <input type="text" id="loginEmail" required>
+                    <label>Enter your email</label>
                     <i class="fa-regular fa-envelope icon"></i>
                 </div>
                 <div class="input-field">
-                    <input type="password" id="loginPassword" class="password" placeholder="Enter your password" required>
+                    <input type="password" id="loginPassword" class="password" required>
+                    <label>Enter your password</label>
                     <i class="fa-solid fa-lock icon"></i>
                     <i class="fa-solid fa-eye-slash showHidePw"></i>
                 </div>
@@ -34,7 +36,7 @@
                     <a href="#" class="text">Forgot password?</a>
                 </div>
                 <div class="input-field button">
-                    <input id="login" type="button" value="Login">
+                    <input onclick="loginFunction()" id="login" type="button" value="Login">
                 </div>
                 <p id="incorrect"></p>
                 <div class="login-signup">
@@ -45,27 +47,31 @@
             </div>
             <!-- Registration Form -->
             <div class="form signup">
-                <span class="title">Registration</span>
+                <h2>Registration</h2>
                 <div class="input-field">
-                    <input id="signupName" type="text" placeholder="Enter your name" required>
+                    <input id="signupName" type="text" required>
+                    <label>Enter your name</label>
                     <i class="fa-regular fa-user"></i>
                 </div>
                 <div class="input-field Email">
-                    <input id="signupEmail" type="email" placeholder="Enter your email" required>
+                    <input id="signupEmail" type="text" required>
+                    <label>Enter your email</label>
                     <i class="fa-regular fa-envelope icon"></i>
                 </div>
                 <div class="input-field Pass">
-                    <input id="signupPassword" type="password" class="password" placeholder="Create a password" required>
+                    <input id="signupPassword" type="password" class="password" required>
+                    <label>Create a password</label>
                     <i class="fa-solid fa-lock icon"></i>
                     <i class="fa-solid fa-eye-slash showHidePw"></i>
                 </div>
                 <div class="input-field ConfirmPass">
-                    <input type="password" id="ConfirmPass" class="password" placeholder="Confirm a password" required>
+                    <input type="password" id="ConfirmPass" class="password" required>
+                    <label>Confirm a password</label>
                     <i class="fa-solid fa-lock icon"></i>
                     <i class="fa-solid fa-eye-slash showHidePw"></i>
                 </div>
                 <div class="input-field button">
-                    <input id="signUp" type="button" value="Signup">
+                    <input onclick="signUpFunction()" id="signUp" type="button" value="Signup">
                 </div>
                 <p id="exist"></p>
                 <div class="login-signup">

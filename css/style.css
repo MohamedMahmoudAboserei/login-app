@@ -9,6 +9,7 @@
 }
 
 body {
+    height: 70vh;
     background-image: url(../img/1.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -24,32 +25,25 @@ li {
     list-style: none;
 }
 
-/* Sign UP */
-
 .box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
-}
-
-h1 {
-    color: #17a2b8;
-}
-
-.lead {
-    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .username {
     font-size: 40px;
-    color: #000;
+    color: #fff;
     font-weight: 600;
 }
 
 .name {
     font-size: 50px;
-    color: #1e1e1e;
+    color: #fff;
     font-weight: bold;
 }
